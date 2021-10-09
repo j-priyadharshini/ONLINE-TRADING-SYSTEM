@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Stock’s current price.
+{% endblock %}
+
+{% block style %}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  width: 20%
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+{% endblock %}
+
+{% block content %}
+<table>
+    <thead>
+        <th>STOCK SYMBOL</th>
+        <th>NAME</th>
+        <th>SHARES</th>
+        <th>CURRENT PRICE</th>
+        <th>TOTAL</th>
+    </thead>
+
+    <TBODY>
+        {% for row in details %}
+        <tr>
+            <td>{{row.symbol}}</td>
+            <td>{{row.name_company}}</td>
+            <td>{{row.shares}}</td>
+            <td>{{usd(row.current_price)}}</td>
+            <td>{{usd(row.total)}}</td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td>CASH</td>
+            <td></Td>
+            <td></td>
+            <td></td>
+            <td>{{usd(cash)}}</td>
+        </tr>
+        <tr>
+            <td class="hideBorder"></td>
+            <td class="hideBorder"></Td>
+            <td class="hideBorder"></td>
+            <td class="hideBorder"></td>
+            <td class="hideBorder"><b>{{usd(s)}}</b></td>
+        </tr>
+    </TBODY>
+</table>
+
+
+{% endblock %}

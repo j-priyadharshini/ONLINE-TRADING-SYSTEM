@@ -1,0 +1,254 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+		<title>{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+        
+        <style>
+            img {
+  opacity: 4;
+}
+body
+{
+    color: rgb(85, 62, 62);
+    /* font-family: 'Steelfish Rg', 'helvetica neue', */
+                    /* helvetica, arial, sans-serif; */
+                font-family: Calibri, 'Trebuchet MS', sans-serif;
+                background-image: url("https://unsplash.com/photos/kDFtulaOXag/download?force=true&w=1920");
+                /* opacity: 0.4; */
+                background-repeat: repeat-y;
+                background-size: auto;
+                font-size: 45px;
+}
+.w{
+                width: 100%;
+                text-align: center;
+            }
+            table {
+            border-collapse: collapse;
+            width: 100%;
+            }
+            #topleft, #bottomright, #topright, #bottomleft {
+                border: 0px;
+                padding: 20px 20px;
+                }
+            #topleft {
+                border-left-style: none;
+                border-top-style: none;
+            }    
+            #bottomright {
+                border-right-style: none;
+                border-bottom-style: none;
+            }
+            #topright {
+                border-right-style: none;
+                border-top-style: none;
+            }    
+            #bottomleft {
+                border-left-style: none;
+                border-bottom-style: none;
+            }
+            .row {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+            }
+            .column {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 100%;
+                flex: 1;
+            }
+            .col1{
+                height: 100px;
+                margin: 30%;
+            }
+            h3 {
+                text-align: center;
+            }
+            footer {
+                text-align: center;
+                padding: 3px;
+                backdrop-filter: blur(5px);
+                color: rgb(85, 62, 62);
+            }
+            li
+{
+    list-style-type: none;
+    align-self: center;
+} 
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+
+  text-decoration: none;
+ }
+
+ul {
+  list-style-type: none;
+  /* margin: 0; */
+  padding: 30px;
+  margin-bottom: 32px; 
+  overflow: hidden;
+  background-color: #333;
+}
+
+li a:hover:active{
+  background-color: white;
+  color: black;
+  text-decoration: none;
+
+}
+
+li ul{
+    padding: 4px;
+    margin: 2px;
+    margin-bottom: 32px; 
+   text-align: center;
+   display: none;
+  position: absolute;
+}
+
+li:hover ul
+{
+  display : block;
+  block-size: auto;
+  background-color: black;
+  color: green;
+  height:auto;
+
+}
+li ul li{
+  clear:none;
+  border: 1pt;
+  margin: 3px; 
+  padding: 4px;
+  float: inherit;
+}
+.boot {
+        background-image: url(/home.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        /* background-color: rgb(164, 238, 238); */
+background-size: cover;
+        font-size: 120px;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-family: 'Steelfish Rg', 'helvetica neue',
+                    helvetica, arial, sans-serif;
+        font-weight: 800;
+        -webkit-font-smoothing: antialiased;
+    }
+        </style>
+    </head>
+    <body class="loggedin">
+        <!-- <div>
+
+            <img src="home.jpg" width= 100% height=100%> -->
+            
+            
+        <nav class="navtop">
+			<div>
+				<h1>Online Trading System</h1>     
+                <li>           
+                    <a href="{{ url_for('quote') }}"><i class="fa fa-quote-left"></i>QUOTE</a>             
+                    </li>
+                    <li>             
+                    <a href="{{ url_for('buy') }}"><i class="fa fa-shopping-cart"></i>BUY</a>              
+                   </li>
+                    <li>
+                    <a href="{{ url_for('sell') }}"><i class='fas fa-handshake'></i>SELL</a>
+                   </li>  
+                      <li>
+                        <a href="#" class= clickevent><i class="fas fa-user"></i>{{name}}</a>
+                        <ul>
+                            <li>                     
+                                <div>
+                                <a href="{{ url_for('profile') }}"><i class="fas fa-user-circle"></i>Profile</a>
+                                    </div>
+                                    <div>
+                                      <a href="{{ url_for('dashboard') }}"><i class="fas fa-medal"></i>Dashboard</a>
+                                          </div>
+                                    <div>
+                                      <a href="{{ url_for('history') }}"><i class="fa fa-history" aria-hidden="true"></i>History</a>
+                                          </div>
+                                    <div>
+                                <a href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>logout</a>
+                                </div>                        
+                            </li>
+                        </ul>
+                      </li>        
+			</div>
+		</nav>
+        
+        <div class='row'>
+            <div class='column'>
+              <div class='col1'>
+                <h1>Make informed investment choices.</h1>
+              </div>
+            </div>
+            <div class='column'>
+              <div class='col1' style="margin-left: 0px;">
+                <h4>At your fingertips is a one-of-a-kind, comprehensive analysis of every publicly traded stock in the globe. You'll save endless hours sifting through information and your decisions will be free of emotion.  </h4>
+              </div>
+            </div>
+           
+          </div>
+        <br>
+        <br>
+        <div class="w">
+            <h2>Join the 6 people who have already chosen the <u>Online Trading System</u>.
+            <br> Licensed and regulated across multiple jurisdictions, we currently serve clients nationwide.
+            </h2>
+            <br>
+            <div>
+                <img alt="India" src="https://www.nicepng.com/png/full/250-2508592_india-png-images.png">
+            </div><br><br><br>
+        </div>
+        <table style="backdrop-filter: blur(10px);">
+            <tr>
+            <td id="topleft">
+                <div width="auto">
+                    <h1>Find fantastic investing options.</h1>
+                    <img src="https://images.ctfassets.net/n07nr2koi959/30ZOpajKP9a8rRtH2ddTJB/70eff4b542d76cf4978149353dfae1c9/discover.png" alt="bear with magnifier">
+                </div>
+            </td>
+            <td id="topright">
+                <div width="auto">
+                    <h1>Save hours of data collection time by letting us automate the process.</h1>
+                    <img src="https://images.ctfassets.net/n07nr2koi959/34KCrws5FuhbD6QU1HUFqH/b3b6fa3e2575ac23806dd5dddeb2488d/save-time.png" alt="bear with watch">
+                </div>
+            </td>
+            </tr>
+            <tr>
+            <td id=bottomleft>
+                <div width="auto">
+                    <h1>Make educated and confident judgments.</h1>
+                    <img src="https://images.ctfassets.net/n07nr2koi959/6SQT9n49LjFKTD81JAZJTx/49e726080b69202acb45b6f3693666ef/informed-decisions.png" alt="bull with tablet">
+                </div>
+            </td>
+            <td id="bottomright">
+                <div width="auto">
+                    <h1>Keep up with the latest developments.</h1>
+                    <img src="https://images.ctfassets.net/n07nr2koi959/4JrnUbxk7fDqy23zTULnse/152206d1dde9d728f2884483c08801b8/stay-up-to-date.png" alt="bear with phone">
+                </div>
+            </td>
+            </tr>
+            </tbody>
+        </table>
+       
+        <footer>
+            <h3>Online Trading System ©</h3>
+            <div>
+                <h6>The Online Trading System is a modest project developed by a group of amateur programmers. Any advice provided on this website is generic in nature and has not been created with your objectives, financial position, or requirements in mind. Trading and investing are high-risk activities that are not recommended or appropriate for all clients. Before purchasing or selling, make sure you thoroughly evaluate your investment objectives, degree of experience, and risk appetite.</h6> 
+                <h6>Buying or selling involves financial risks and may result in a partial or entire loss of cash; as a result, you should not invest money you can't afford to lose. You should be aware of and completely understand all of the dangers connected with trading and investing, and if you have any reservations, you should get counsel. You should not rely on any of the advice and/or information on this website, and before making any investment choice, you should evaluate whether it is appropriate for your circumstances and seek appropriate financial, taxes, and legal advice. </h6>
+            </div>
+        </footer>
+    </body>
+</html>

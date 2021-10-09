@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History of your activities
+{% endblock %}
+
+{% block style %}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+{% endblock %}
+
+{% block content %}
+<table>
+    <thead>
+        <th>STOCK SYMBOL</th>
+        <th>SHARES</th>
+        <th>PRICE</th>
+        <th>TRANSACTED ON</th>
+    </thead>
+    <TBODY>
+        {% for row in history %}
+        <tr>
+            <td>{{row.symbol}}</td>
+            <td>{{row.shares}}</td>
+            <td>{{usd(row.price)}}</td>
+            <td>{{row.transacted_on}}</td>
+        </tr>
+        {% endfor %}
+    </TBODY>
+</table>
+
+{% endblock %}

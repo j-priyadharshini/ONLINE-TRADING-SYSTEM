@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block title %}ChangePassword{% endblock %}
+
+{% block content %}
+
+<div class="changepwd">
+    <h2>Change Password</h2>
+   
+        <form action = "{{ url_for('changepwd') }}" method="POST">
+            
+            <label for="oldpwd">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input type="password" name="oldpwd" autofocus autocomplete="off"  placeholder="type your old password" id="oldpwd" required>
+            <br>
+            <label for="newpwd">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input type="password" name="newpwd" autocomplete="off" placeholder="type your new password" id="newpwd" required>
+            <br>
+            <label for="renewpwd">
+                <i class="fas fa-lock"></i>
+            </label>
+            <input type="password" name="renewpwd" autocomplete="off" placeholder="retype your new password" id="renewpwd" required>
+            <br>
+            <div class="msg">{{ msg }}</div>
+            <br>
+            <input type="submit" value="Submit">
+
+        </form>
+  
+</div>
+
+
+
+{% endblock %}
