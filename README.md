@@ -12,9 +12,6 @@ html, css, javascript.
 Register - A new user can register them self with the help of register
 option by entering username , password and their email address
 
-Terms and Conditions - a user must agree those terms and conditions to
-complete the registration.
-
 Login - To login the username and password must be entered.
 
 Stock Quote - To check the stock price, stock name must be entered.
@@ -44,9 +41,6 @@ Contact us - To contact admin name, subject, email, message is filled
 and sent. After pressing the send button ,a copy of the detail is
 forwarded to the user's email is.
 
-Portfolio - A portfolio is a collection of financial investments on
-stocks. An excel sheet is given to manage it.
-
 Help - Some frequently asked FAQ's.
 
 A Video tutorial is given in the Online trading system for a clear
@@ -66,13 +60,8 @@ understanding.
 ### libraries required
     -flask-mysqldb
     -flask-mail
-    -smptblib
     -python-dotenv
-    -pandas
-    -numpy
-    -plotly
-    -yfinance
-    -matplotlib 
+    
 
     
   
@@ -85,7 +74,7 @@ understanding.
 
 
 ## VIDEO DEMO
-Link: [OTS DEMO](https://linktr.ee/tradeonline)
+Link: [OTS DEMO](https://drive.google.com/file/d/1CxIAhBIcQllMWVzu-rDMC5okwxKGDDwq/view?usp=sharing)
 
 
 
