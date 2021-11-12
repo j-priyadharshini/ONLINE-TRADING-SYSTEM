@@ -52,26 +52,26 @@ understanding.
 
 ## Software requirements:
 ### Front end
-    -flask    
-    -Python 3.7.2
+- flask    
+- Python 3.7.2
 
 ### Back end
-    -mysql workbench
+- mysql workbench
 
 ### libraries required
-    -flask-mysqldb
-    -flask-mail
-    -python-dotenv
+- flask-mysqldb
+- flask-mail
+- python-dotenv
     
 
     
   
     
 ## How to run:
-    -set FLASK_APP=app.py
-    -set FLASK_DEBUG=1
-    -set API_KEY=pk_75b568615f10451191750bf0413447f3
-    -flask run
+- set FLASK_APP=app.py
+- set FLASK_DEBUG=1
+- set API_KEY=pk_75b568615f10451191750bf0413447f3
+- flask run
 
 
 ## VIDEO DEMO
