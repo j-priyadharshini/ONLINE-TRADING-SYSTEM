@@ -1,7 +1,7 @@
 # ONLINE-TRADING-SYSTEM
 
 
-Online trading system is an organized and systematic process for buying or selling of stock making use of real-world stock data which changes dynamically. For each user activity an email will be sent to the registered mail-id correspondingly.
+Online trading system is an organized and systematic process for buying,selling stock and other basic features available in a stock website with making use of real-world stock data which changes dynamically. For each user activity an email will be sent to the registered mail-id correspondingly.
 
 
 The user has a track of his/her previous transaction history showed in a table and dashboard which shows one's current stocks available. The user has the option to change his/her password.It also has a user guide with FAQs with a tutorial demo of this project.
