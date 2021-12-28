@@ -44,10 +44,6 @@ forwarded to the user's email is.
 
 Help - Some frequently asked FAQ's.
 
-A Video tutorial is given in the Online trading system for a clear
-understanding.
-
-
     
 
 ## Software requirements:
@@ -62,22 +58,11 @@ understanding.
 - flask-mysqldb
 - flask-mail
 - python-dotenv
-    
-
-    
+        
   
     
 ## How to run:
 - set FLASK_APP=app.py
-- set FLASK_DEBUG=1
 - set API_KEY=pk_75b568615f10451191750bf0413447f3
 - flask run
-
-
-## VIDEO DEMO
-Link: [OTS DEMO](https://drive.google.com/file/d/1CxIAhBIcQllMWVzu-rDMC5okwxKGDDwq/view?usp=sharing)
-
-
-
-    
 
